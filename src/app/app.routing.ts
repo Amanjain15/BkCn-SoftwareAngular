@@ -15,7 +15,7 @@ const routes: Routes =[
     { path: 'table',          component: TablesComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
-      { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
+    { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
