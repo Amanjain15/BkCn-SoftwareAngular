@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -17,9 +17,14 @@ import { UserComponent } from './user/user.component';
 import { TablesComponent } from './tables/tables.component';
 import { TypographyComponent } from './typography/typography.component';
 import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';
+
+
+import { 
+  AlertService,
+  AuthService,
+  ProductService,
+  
+} from './_services/index';
 
 @NgModule({
   declarations: [
@@ -29,10 +34,6 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
     TablesComponent,
     TypographyComponent,
     IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
-    UpgradeComponent
-
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,8 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
     SidebarModule,
     RouterModule,
     AppRoutingModule,
-    LbdModule
+    LbdModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
